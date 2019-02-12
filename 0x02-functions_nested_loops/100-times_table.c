@@ -6,34 +6,34 @@
 */
 void print_times_table(int n)
 {
-	int c, m;
+	int a, b;
 
 	if (n > 15 || n < 0)
 	{
 		return;
 	}
-	for (c = 0; c <= n; c++)
+	for (a = 0; a <= n; a++)
 	{
-		for (m = 0; m <= n; m++)
+		for (b = 0; b <= n; b++)
 		{
-			if (((m * c) > 99))
+			if (((a * b) > 99))
 			{
-				_putchar(((m * c) / 100) + '0');
-				_putchar((((m * c) % 100) / 10) + '0');
+				_putchar(((a * b) / 100) + '0');
+				_putchar((((a * b) % 100) / 10) + '0');
 
 			}
-			else if ((m * c) > 9)
+			else if ((a * b) > 9)
 			{
 				_putchar(' ');
-				_putchar(((m * c) / 10) + '0');
+				_putchar(((a * b) / 10) + '0');
 			}
-			if (m != 0 && (m * c) < 10)
+			if (a != 0 && (a * b) < 10)
 			{
 				_putchar(' ');
 				_putchar(' ');
 			}
-			_putchar(((m * c) % 10) + '0');
-			if (m != n)
+			_putchar(((a * b) % 10) + '0');
+			if (a != n)
 			{
 				_putchar(',');
 				_putchar(' ');
