@@ -2,7 +2,6 @@
 #define _PUTCHAR
 
 #include <unistd.h>
-#include <ctype.h>
 
 /**
  * _putchar - writes the character c to stdout
