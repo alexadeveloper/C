@@ -27,7 +27,7 @@ void print_times_table(int n)
 				_putchar(' ');
 				_putchar(((a * b) / 10) + '0');
 			}
-			if (a != 0 && (a * b) < 10)
+			if (b != 0 && (a * b) < 10)
 			{
 				_putchar(' ');
 				_putchar(' ');
