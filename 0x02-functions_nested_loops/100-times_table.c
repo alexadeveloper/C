@@ -1,74 +1,46 @@
 #include "holberton.h"
-
 /**
- *print_one  -  prints numbers less 9
- *@a: is a int
- *@b: is a int
- *Declaration: Auxilio
- *Return: nothing
- */
-void print_one(int a, int b)
-{
-	if (b != 0)
-	{
-		_putchar(' ');
-		_putchar(' ');
-	}
-	_putchar(a + '0');
-}
-/**
-  *print_two - prints numbers > 9 && < 99
-  *@c: is a int
-  *Return: nothing
-  */
-void print_two(int c)
-{
-	_putchar(' ');
-	_putchar((c / 10) + '0');
-	_putchar((c % 10) + '0');
-}
-/**
-  *print_three - print number >99
-  *@d : is a int
-  *Return: Nothing
-  */
-void print_three(int d)
-{
-	_putchar((d / 100) + '0');
-	_putchar(((d / 10) % 10) + '0');
-	_putchar((d % 10) + '0');
-}
-/**
-  *print_times_table  -  prints the n times table, starting with 0
-  *@n: is a int
-  *Return: values 0
-  */
+* print_times_table - print tables
+* @n: int parameter
+* Return: Always 0.
+*/
 void print_times_table(int n)
 {
-	int e, f, g;
+	int c, m;
 
-	if (n > 0 && n < 15)
+	if (n > 15 || n < 0)
 	{
-		for (e = 0 ; e <= n ; e++)
+		return;
+	}
+	for (c = 0; c <= n; c++)
+	{
+		for (m = 0; m <= n; m++)
 		{
-			for (f = 0 ; f <= n ; f++)
+			if (((m * c) > 99))
 			{
-				g = e * f;
-				if (g > 99)
-					print_three(g);
-				if (g >= 10 && g <= 99)
-					print_two(g);
-				if (g <= 9)
-					print_one(g, f);
-				if (f != n)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
-				else
-				{
-					_putchar('\n');
-				}
+				_putchar(((m * c) / 100) + '0');
+				_putchar((((m * c) % 100) / 10) + '0');
+
+			}
+			else if ((m * c) > 9)
+			{
+				_putchar(' ');
+				_putchar(((m * c) / 10) + '0');
+			}
+			if (m != 0 && (m * c) < 10)
+			{
+				_putchar(' ');
+				_putchar(' ');
+			}
+			_putchar(((m * c) % 10) + '0');
+			if (m != n)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+			else
+			{
+				_putchar('\n');
 			}
 		}
 	}
