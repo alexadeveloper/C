@@ -2,6 +2,7 @@
 #define _PUTCHAR
 
 #include <unistd.h>
+#include <ctype.h>
 
 /**
  * _putchar - writes the character c to stdout
@@ -11,5 +12,7 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 int _putchar(int c);
-int print_alphabet();
+void print_alphabet();
+void print_alphabet_x10(void);
+int _islower(int c);
 #endif
