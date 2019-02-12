@@ -33,7 +33,7 @@ void print_times_table(int n)
 				_putchar(' ');
 			}
 			_putchar(((a * b) % 10) + '0');
-			if (a != n)
+			if (b != n)
 			{
 				_putchar(',');
 				_putchar(' ');
