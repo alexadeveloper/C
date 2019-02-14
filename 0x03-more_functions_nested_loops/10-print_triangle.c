@@ -3,7 +3,6 @@
 /**
 *print_triangle - draws a triangle in the terminal
 *@size: is a int
-*Return: values 0
 */
 void print_triangle(int size)
 {
