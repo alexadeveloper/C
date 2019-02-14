@@ -4,6 +4,7 @@
 *print_triangle - draws a triangle in the terminal
 *@size: is a int
 */
+
 void print_triangle(int size)
 {
 	int times, espacios, imprime;
