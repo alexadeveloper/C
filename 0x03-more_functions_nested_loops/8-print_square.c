@@ -5,23 +5,21 @@
 *@size: is a int
 *Return: values 0
 */
-void print_square(int size)
+void print_diagonal(int n)
 {
-	int filas, columnas;
+	int times, espacios;
 
-	if (size <= 0)
+	for (times = 1; times <= n; times++)
 	{
-		_putchar('\n');
-	}
-	else
-	{
-		for (columnas = 1; columnas <= size; columnas++)
+		if (times != 1)
 		{
-			for (filas = 1; filas <= size; filas++)
-			{
-				_putchar('#');
-			}
 			_putchar('\n');
+			for (espacios = 1; espacios <= (times - 1); espacios++)
+			{
+				_putchar(' ');
+			}
 		}
+		_putchar(92);
 	}
+	_putchar('\n');
 }
