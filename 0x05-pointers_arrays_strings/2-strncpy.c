@@ -10,7 +10,7 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i, j, k;
+	int i, j;
 
 	for (i = 0; dest[i] != '\0'; i++)
 	{
@@ -19,12 +19,12 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		if (j < n)
 		{
-			dest[i + j] = src[j];
+			dest[j] = src[j];
 		}
 	}
-	for (k = (j - 1); k < n; k++)
+	for ( ; j < n; j++)
 	{
-		dest[k] = '\0';
+		dest[j] = '\0';
 	}
 return (dest);
 }
