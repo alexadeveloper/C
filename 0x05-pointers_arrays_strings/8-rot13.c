@@ -10,11 +10,11 @@ char *rot13(char *s)
 {
 	int i, j;
 	char origen[] = {"abcdefghijklmABCDEFGHIJKLM"};
-	char destino[] = {"nopqrstuvwxyzN0PQRSTUVWXYZ"};
+	char destino[] = {"nopqrstuvwxyzNOPQRSTUVWXYZ"};
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; j <= 26; j++)
+		for (j = 0; j < 26; j++)
 		{
 			if (s[i] == origen[j])
 			{
