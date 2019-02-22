@@ -2,6 +2,32 @@
 #include <stdio.h>
 
 /**
+  *mypow -do a power
+  *@base: is a int
+  *@power: is a exponent
+  *Return: the pow
+ */
+
+int mypow(int base, int power)
+{
+	int p, potencia;
+
+	potencia = 1;
+	if (power == 0)
+	{
+		potencia = 1;
+	}
+	else
+	{
+		for (p = 1; p <= power; p++)
+		{
+			potencia = potencia * base;
+		}
+	}
+return (potencia);
+}
+
+/**
   *print_number -print an integer
   *@n: is a integer
  */
