@@ -34,8 +34,7 @@ return (potencia);
 
 void print_number(int n)
 {
-	int i, j, num, cont;
-	int divisores[] = { 10000000, 1000000, 100000, 10000, 1000, 100, 10, 1 };
+	int i, j, num, cont, potencia;
 
 	num = n;
 	cont = 0;
@@ -50,14 +49,16 @@ void print_number(int n)
 	}
 	for (i = 0; i <= 7; i++)
 	{
-		j = num / divisores[i];
+		potencia = mypow(10, (7 - i));
+		j = num / potencia;
 		if (j > 0)
 		{
 			_putchar(j + 48);
 			cont++;
 		}
-		num = num - (j * divisores[i]);
-		if ((num / divisores[i + 1]) == 0 && cont != 0 && i != 7)
+		num = num - (j * potencia);
+		potencia = mypow(10, (6 - i));
+		if ((num / potencia) == 0 && cont != 0 && i != 7)
 		{
 			_putchar('0');
 		}
