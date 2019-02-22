@@ -47,9 +47,9 @@ void print_number(int n)
 	{
 		_putchar('0');
 	}
-	for (i = 0; i <= 7; i++)
+	for (i = 0; i <= 8; i++)
 	{
-		potencia = mypow(10, (7 - i));
+		potencia = mypow(10, (8 - i));
 		j = num / potencia;
 		if (j > 0)
 		{
@@ -57,8 +57,8 @@ void print_number(int n)
 			cont++;
 		}
 		num = num - (j * potencia);
-		potencia = mypow(10, (6 - i));
-		if ((num / potencia) == 0 && cont != 0 && i != 7)
+		potencia = mypow(10, (7 - i));
+		if ((num / potencia) == 0 && cont != 0 && i != 8)
 		{
 			_putchar('0');
 		}
