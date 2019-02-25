@@ -3,6 +3,7 @@
 /**
   *print_diagsums - sum two diagonals
   *@a: is a int
+  *@size: is a int
  */
 
 void print_diagsums(int *a, int size)
@@ -12,7 +13,8 @@ void print_diagsums(int *a, int size)
 	j = 0;
 	k = size - 1;
 	tam = (size * size) - 1;
-	sum = 0; sum2 = 0;
+	sum = 0;
+	sum2 = 0;
 	for (i = 0; i <= tam; i++)
 	{
 		if (i == j)
