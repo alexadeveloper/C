@@ -7,21 +7,21 @@
   *Return: the num accept into s
  */
 
-
+char *_strpbrk(char *s, char *accept)
 {
 	int i, j;
-	unsigned int cont;
 
-	cont = 0;
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; accept[j] != '\0'; j++)
+		j = 0;
+		while (accept[j] != s[i] && accept[j])
 		{
-			if (s[i] == accept[j])
-			{
-				cont++;
-			}
+			j++;
+		}
+		if (s[i] == accept[j])
+		{
+			return (s + i);
 		}
 	}
-return (i - cont);
+return (NULL);
 }
