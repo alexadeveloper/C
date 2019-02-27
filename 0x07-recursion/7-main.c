@@ -11,9 +11,9 @@ int main(void)
 	    int r;
 	        r = is_palindrome("level");
 		    printf("%d\n", r);
-		        r = is_palindrome("redder");
+		        r = is_palindrome("reader");
 			    printf("%d\n", r);
-			        r = is_palindrome("holberton");
+			        r = is_palindrome("");
 				    printf("%d\n", r);
 				        r = is_palindrome("step on no pets");
 					    printf("%d\n", r);

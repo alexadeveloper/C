@@ -23,7 +23,7 @@ return (_strlen_recursion(s + 1) + 1);
 
 int validar(char *s, int i, int j)
 {
-	if ((j - i) >= 0 && (j - i) <= 1)
+	if (i == j)
 	{
 		return (1);
 	}
@@ -44,7 +44,7 @@ int is_palindrome(char *s)
 {
 	int j = _strlen_recursion(s);
 
-	if (j >= 0 && j <= 1)
+	if (j == 0 || j == 1)
 	{
 		return (1);
 	}
