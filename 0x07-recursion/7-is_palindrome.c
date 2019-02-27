@@ -29,6 +29,9 @@ int validar(char *s, int i, int j)
 	}
 	if (*(s + i) == *(s + j))
 	{
+		if (j - i == 1)
+		return (1);
+		else
 		return (validar(s, (i + 1), (j - 1)));
 	}
 	else
