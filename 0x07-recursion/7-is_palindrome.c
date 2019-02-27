@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
   *_strlen_recursion - return the length of a string
   *@s: is the string
@@ -15,10 +14,11 @@ int _strlen_recursion(char *s)
 return (_strlen_recursion(s + 1) + 1);
 }
 /**
-  *validar - test the root
-  *@n: is a int
-  *@o: is a int
-  *Return: the root square
+  *validar - test the string
+  *@s: is a char
+  *@i: is a int
+  *@j: is a int
+  *Return: if is a palindrome
  */
 
 int validar(char *s, int i, int j)
@@ -35,9 +35,9 @@ int validar(char *s, int i, int j)
 	return (0);
 }
 /**
-  *is_prime_number - prime numbers
-  *@n: is the number
-  *Return: 1 it is a prime number 0 if no
+  *is_palindrome - return if is a palindrome
+  *@s: is the string
+  *Return: 1 it is a palindrome 0 if no
  */
 
 int is_palindrome(char *s)
