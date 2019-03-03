@@ -22,9 +22,9 @@ int  main(int argc, char *argv[])
 	{
 		c = 0;
 		s = argv[a];
-		for (d = 0; d <= strlen(argv[a]); d++)
+		for (d = 0; d < strlen(argv[a]); d++)
 		{
-			if(s[d] <48 || s[d] > 57)
+			if (s[d] < 48 || s[d] > 57)
 			{
 				c++;
 			}
