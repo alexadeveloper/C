@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 /**
   *main - multiplies two numbers
   *@argc: is a int
@@ -9,7 +9,9 @@
  */
 int  main(int argc, char *argv[])
 {
-	int a, b, suma;
+	int a, b, c, suma;
+	char *s;
+	unsigned int d;
 
 	if (argc < 2)
 	{
@@ -18,8 +20,17 @@ int  main(int argc, char *argv[])
 	}
 	for (a = 1; a < argc; a++)
 	{
+		c = 0;
+		s = argv[a];
+		for (d = 0; d <= strlen(argv[a]); d++)
+		{
+			if(s[d] <48 || s[d] > 57)
+			{
+				c++;
+			}
+		}
 		b = atoi(argv[a]);
-		if (*argv[a] != 48 && b == 0)
+		if ((*argv[a] != 48 && b == 0) || c != 0)
 		{
 			printf("Error\n");
 		return (1);
