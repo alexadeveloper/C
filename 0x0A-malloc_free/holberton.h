@@ -8,5 +8,6 @@
 
 int _putchar(int c);
 char *create_array(unsigned int size, char c);
+char *_strdup(char *str);
 #define NULL ((char *)0)
 #endif
