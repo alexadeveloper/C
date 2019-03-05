@@ -43,7 +43,7 @@ char *_strdup(char *str)
 	{
 	return (NULL);
 	}
-	for (i = 0; i < j; i++)
+	for (i = 0; i <= j; i++)
 	{
 		copy[i] = str[i];
 	}
