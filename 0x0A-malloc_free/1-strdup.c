@@ -1,7 +1,23 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+
+/**
+  *_strlen - returns the length of a string
+  *@s: is a char
+  *Return: the length of a string
+ */
+int _strlen(char *s)
+{
+	int cont;
+
+	cont = 0;
+	while (s[cont] != '\0')
+	{
+		cont++;
+	}
+return (cont);
+}
 /**
   *_strdup-  copy a string
   *@str: the initial string
@@ -10,20 +26,20 @@
 
 char *_strdup(char *str)
 {
-	unsigned int i, size;
+	unsigned int i, j;
 	char *copy;
 
 	if (str == NULL)
 	{
 	return (NULL);
 	}
-	size = strlen(str);
-	copy = malloc(sizeof(char) * size);
+	j = _strlen(str);
+	copy = malloc(sizeof(char) * j);
 	if (copy == NULL)
 	{
 	return (NULL);
 	}
-	for (i = 0; i < size; i++)
+	for (i = 0; i < j; i++)
 	{
 		copy[i] = str[i];
 	}
