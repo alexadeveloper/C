@@ -37,7 +37,7 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	size = _strlen(s1);
 	size2 = _strlen(s2);
-	copy = malloc(sizeof(char) * (size + size2));
+	copy = malloc(sizeof(char) * (size + size2 + 1));
 	if (copy == NULL)
 	{
 	return (NULL);
@@ -48,7 +48,7 @@ char *str_concat(char *s1, char *s2)
 		copy[t] = s1[i];
 		t++;
 	}
-	for (j = 0; j < size2; j++)
+	for (j = 0; j <= size2; j++)
 	{
 		copy[t] = s2[j];
 		t++;
