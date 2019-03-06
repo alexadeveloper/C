@@ -3,6 +3,26 @@
 #include <stdlib.h>
 
 /**
+  *free_grid- free memory
+  *@grid: the pointer to the pointer
+  *@height: the height of the grid
+  *Return: null if it fail
+ */
+
+void free_grid(int **grid, int height)
+{
+	int fila;
+
+	if (grid == NULL || height == 0)
+	return;
+	for (fila = 0; fila < height; fila++)
+	{
+		free(grid[fila]);
+	}
+	free(grid);
+}
+
+/**
  *alloc_grid- return a array 2 dimensional
   *@width: the width of the grid
   *@height: the height of the grid
@@ -21,7 +41,7 @@ int **alloc_grid(int width, int height)
 	matrix = malloc(sizeof(int *) * height);
 	if (matrix == NULL)
 	{
-		free(matrix);
+		free_grid(matrix, height);
 	return (NULL);
 	}
 	for (fila = 0; fila < height; fila++)
@@ -29,12 +49,7 @@ int **alloc_grid(int width, int height)
 		matrix[fila] = malloc(sizeof(int) * width);
 		if (matrix[fila] == NULL)
 		{
-			if (fila >= 0)
-			{
-				free(matrix[fila]);
-				fila--;
-			}
-			free(matrix);
+			free_grid(matrix, width);
 		return (NULL);
 		}
 	}
