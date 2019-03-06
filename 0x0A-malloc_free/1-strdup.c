@@ -38,18 +38,14 @@ char *_strdup(char *str)
 	{
 	return (NULL);
 	}
-	copy = malloc(sizeof(char) * j);
+	copy = malloc(sizeof(char) * (j + 1));
 	if (copy == NULL)
 	{
 	return (NULL);
 	}
-	for (i = 0; i < j; i++)
+	for (i = 0; i <= j; i++)
 	{
 		copy[i] = str[i];
-		if (i == (j - 1))
-		{
-			copy[i + j] = '\0';
-		}
 
 	}
 return (copy);
