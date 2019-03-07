@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	}
 	a = _isdigit(atoi(argv[1]));
 	b = _isdigit(atoi(argv[2]));
-	if (a == 0 || b ==0)
+	if (a == 0 || b == 0)
 	{
 		printf("Error\n");
 	exit(98);
