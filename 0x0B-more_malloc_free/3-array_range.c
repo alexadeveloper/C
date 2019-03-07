@@ -12,7 +12,7 @@
 int *array_range(int min, int max)
 {
 	int *matrix;
-	unsigned int i, tam;
+	unsigned int i, tam, k;
 
 	if (min > max)
 	{
@@ -24,9 +24,11 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
+	k = 0;
 	for (i = min; i <= max; i++)
 	{
-		matrix[i] = i;
+		matrix[k] = i;
+		k++;
 	}
 return (matrix);
 }
