@@ -11,8 +11,8 @@
 
 int *array_range(int min, int max)
 {
-	int *matrix;
-	unsigned int i, tam, k;
+	int *matrix, i;
+	unsigned int tam, k;
 
 	if (min > max)
 	{
