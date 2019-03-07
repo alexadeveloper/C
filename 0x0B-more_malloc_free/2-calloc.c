@@ -11,6 +11,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *cadena;
+	unsigned int i, tam;
 
 	if (nmemb == 0)
 	{
@@ -20,10 +21,15 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 	return (NULL);
 	}
+	tam = size * nmemb;
 	cadena = malloc(size * nmemb);
 	if (cadena == NULL)
 	{
 		return (NULL);
+	}
+	for (i = 0; i < tam; i++)
+	{
+		cadena[i] = 0;
 	}
 return (cadena);
 }
