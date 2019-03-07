@@ -10,12 +10,10 @@
 
 void *malloc_checked(unsigned int b)
 {
-	char *mymalo;
+	char *cadena;
 
-	mymalo = malloc(b);
-	if (mymalo == NULL)
-	{
-		 exit(98);
-	}
-return (mymalo);
+	cadena = malloc(b);
+	if (cadena == NULL)
+		exit(98);
+return (cadena);
 }
