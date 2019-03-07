@@ -58,10 +58,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		cadena[k] = s2[j];
 		k++;
-		if (j == (n - 1))
-		{
-			cadena[k] = '\0';
-		}
 	}
+	cadena[k] = '\0';
 return (cadena);
 }
