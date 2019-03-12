@@ -30,7 +30,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	char *copy_name, *copy_owner;
 	dog_t *new;
-	unsigned int tam_name, tam_owner, i, j;
+	unsigned int tam_name, tam_owner, i;
 
 	if (name == NULL)
 		return (NULL);
