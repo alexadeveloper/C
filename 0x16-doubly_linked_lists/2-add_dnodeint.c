@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- *add_nodeint - adds a new node at the beginning of a list
+ *add_dnodeint - adds a new node at the beginning of a list
  *@head: pointer to pointers
  *@n: is the num to add
  *Return: the num objects
