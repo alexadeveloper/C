@@ -18,10 +18,10 @@ void hash_table_delete(hash_table_t *ht)
 		while (ht->array[cont] != NULL)
 		{
 			aux = ht->array[cont];
+			ht->array[cont] = ht->array[cont]->next;
 			free(aux->value);
 			free(aux->key);
 			free(aux);
-			ht->array[cont] = ht->array[cont]->next;
 		}
 	}
 	free(ht->array);
