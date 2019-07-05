@@ -1,0 +1,6 @@
+CC = gcc
+CFLAGS = -Wall -g
+SRC = main.c holberton.c
+
+all: $(SRC)
+	$(CC) $(CFLAGS) $(SRC) -o holberton
