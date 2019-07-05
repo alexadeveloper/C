@@ -1,0 +1,5 @@
+CC=gcc
+CFLAGS=-Wall -g
+
+all: holberton.c main.c
+	$(CC) $(CFLAGS) -o holberton main.c holberton.c
