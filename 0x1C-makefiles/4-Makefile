@@ -1,15 +1,15 @@
 CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
 SRC = main.c holberton.c
 OBJ = $(SRC:.c=.o)
 NAME = holberton
 RM = rm
-CFLAGS = -Wall -Werror -Wextra -pedantic
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 all: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	$(RM) -f *~ $(NAME)
@@ -17,6 +17,6 @@ clean:
 oclean:
 	$(RM) -f $(OBJ)
 
-f.clean: clean oclean
+fclean: clean oclean
 
 re: oclean all
