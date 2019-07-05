@@ -9,7 +9,7 @@ RM = rm
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 all: $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
 clean:
 	$(RM) -f *~ $(NAME)
